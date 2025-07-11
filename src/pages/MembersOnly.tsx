@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Lock, Shield, Star, Zap, Music, Instagram, Youtube, Cloud } from "lucide-react";
+import { Lock, Shield, Star, Zap, Music, Instagram, Youtube, Cloud, TrendingUp, BarChart3 } from "lucide-react";
 
 const MembersOnly = () => {
   const [password, setPassword] = useState("");
@@ -281,6 +280,170 @@ const MembersOnly = () => {
               </Button>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* SoundCloud Charting */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <TrendingUp className="w-8 h-8 text-primary" />
+            <h2 className="text-3xl font-bold gradient-text">🔥 SoundCloud Charting 📈</h2>
+          </div>
+          
+          <Card className="music-card mb-8">
+            <CardContent className="p-0">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Chart Rank</TableHead>
+                    <TableHead>Price</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">Top 40–50</TableCell>
+                    <TableCell className="text-primary font-bold">$10,000</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Top 20–30</TableCell>
+                    <TableCell className="text-primary font-bold">$15,000</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Top 20–10</TableCell>
+                    <TableCell className="text-primary font-bold">$20,000</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Top 10</TableCell>
+                    <TableCell className="text-primary font-bold">$30,000</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Top 5</TableCell>
+                    <TableCell className="text-primary font-bold">$35,000</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
+          
+          <p className="text-muted-foreground">
+            <span className="text-primary">📤</span> Submit music for approval. Pricing includes strategy, promo, and volume needed to trigger chart algorithm.
+          </p>
+        </div>
+      </section>
+
+      {/* Apple Music + iTunes Charting */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <Music className="w-8 h-8 text-primary" />
+            <h2 className="text-3xl font-bold gradient-text">🍏 Apple Music + iTunes Charting 📈</h2>
+          </div>
+          
+          <p className="text-muted-foreground mb-6">(Pop & Hip-Hop Singles or Albums)</p>
+          
+          <Card className="music-card mb-8">
+            <CardContent className="p-0">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Chart Rank</TableHead>
+                    <TableHead>Quote</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">Top 100 – Top 5</TableCell>
+                    <TableCell className="text-primary font-bold">Ask for quote</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Number 1 Single (Est.)</TableCell>
+                    <TableCell className="text-primary font-bold">$25–30K</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Number 1 Album (Est.)</TableCell>
+                    <TableCell className="text-primary font-bold">$100K</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
+          
+          <p className="text-muted-foreground">
+            <span className="text-primary">⏱</span> Quotes in 24–48 hrs. Final price varies by genre, project length, and timing.
+          </p>
+        </div>
+      </section>
+
+      {/* Singles & Projects - Units */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <BarChart3 className="w-8 h-8 text-primary" />
+            <h2 className="text-3xl font-bold gradient-text">💽 Singles & Projects – Units 🎶</h2>
+          </div>
+          
+          <Card className="music-card text-center">
+            <CardHeader>
+              <CardTitle className="text-2xl gradient-text">RIAA Gold Plaque – 500,000 Units</CardTitle>
+              <CardDescription className="text-lg">Units delivered through streams & downloads</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="text-4xl font-bold text-primary">$3.5M</div>
+              <div className="text-lg text-muted-foreground">Estimated cost to achieve</div>
+              <div className="space-y-3 text-left max-w-md mx-auto">
+                <div className="flex items-center gap-3">
+                  <Zap className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>Inquiries must be serious only</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Zap className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>🎯 Can be structured across multiple campaigns or bundled with charting</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Billboard Charting */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <BarChart3 className="w-8 h-8 text-primary" />
+            <h2 className="text-3xl font-bold gradient-text">📊 Billboard Charting 📈</h2>
+          </div>
+          
+          <Card className="music-card mb-8">
+            <CardContent className="p-0">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Chart</TableHead>
+                    <TableHead>Starting Price</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">Billboard Sales Chart</TableCell>
+                    <TableCell className="text-primary font-bold">$25,000+</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Billboard Hot 100 (Top 90–100)</TableCell>
+                    <TableCell className="text-primary font-bold">$55,000+</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Top 50 Spot Available</TableCell>
+                    <TableCell className="text-primary font-bold">Custom Quote</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
+          
+          <p className="text-muted-foreground">
+            <span className="text-primary">📈</span> Billboard placements require large-scale volume and conversion tracking. Only available to pre-qualified clients.
+          </p>
         </div>
       </section>
 
