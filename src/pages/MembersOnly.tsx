@@ -1,9 +1,10 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Lock, Shield, Star, Zap, Music, Instagram, Youtube, Cloud, TrendingUp, BarChart3 } from "lucide-react";
+import { Lock, Shield, Star, Zap, Music, Instagram, Youtube, Cloud, TrendingUp, BarChart3, ShoppingCart, Mail } from "lucide-react";
 
 const MembersOnly = () => {
   const [password, setPassword] = useState("");
@@ -18,6 +19,18 @@ const MembersOnly = () => {
     } else {
       setError("Incorrect password. Please try again.");
     }
+  };
+
+  const handlePurchase = (packageName: string, price: string) => {
+    // Placeholder for purchase functionality
+    console.log(`Purchase requested for ${packageName} at ${price}`);
+    alert(`Purchase functionality for ${packageName} (${price}) would be implemented here.`);
+  };
+
+  const handleInquiry = (service: string) => {
+    // Placeholder for inquiry functionality
+    console.log(`Inquiry requested for ${service}`);
+    alert(`Inquiry for ${service} would be sent here.`);
   };
 
   if (!isAuthenticated) {
@@ -87,6 +100,7 @@ const MembersOnly = () => {
                     <TableHead>Post Likes</TableHead>
                     <TableHead>Reels Views</TableHead>
                     <TableHead>Price</TableHead>
+                    <TableHead>Action</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -96,6 +110,16 @@ const MembersOnly = () => {
                     <TableCell>500–1,000 (x5 posts)</TableCell>
                     <TableCell>50,000</TableCell>
                     <TableCell className="text-primary font-bold">$250</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("Instagram Starter Boost", "$250")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Growth Pack</TableCell>
@@ -103,6 +127,16 @@ const MembersOnly = () => {
                     <TableCell>2,000–5,000 (x10 posts)</TableCell>
                     <TableCell>75,000</TableCell>
                     <TableCell className="text-primary font-bold">$500</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("Instagram Growth Pack", "$500")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Pro Pack</TableCell>
@@ -110,6 +144,16 @@ const MembersOnly = () => {
                     <TableCell>5,000–10,000 (x20 posts)</TableCell>
                     <TableCell>100,000</TableCell>
                     <TableCell className="text-primary font-bold">$1,250</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("Instagram Pro Pack", "$1,250")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Engagement Only</TableCell>
@@ -117,6 +161,16 @@ const MembersOnly = () => {
                     <TableCell>500–1,000 (x10 posts)</TableCell>
                     <TableCell>Optional</TableCell>
                     <TableCell className="text-primary font-bold">$150</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("Instagram Engagement Only", "$150")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">High Engagement Pack</TableCell>
@@ -124,6 +178,16 @@ const MembersOnly = () => {
                     <TableCell>10,000+ (x10 posts)</TableCell>
                     <TableCell>200,000+</TableCell>
                     <TableCell className="text-primary font-bold">$500+</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("Instagram High Engagement Pack", "$500+")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -154,6 +218,7 @@ const MembersOnly = () => {
                     <TableHead>Likes</TableHead>
                     <TableHead>Subscribers</TableHead>
                     <TableHead>Price</TableHead>
+                    <TableHead>Action</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -163,6 +228,16 @@ const MembersOnly = () => {
                     <TableCell>500</TableCell>
                     <TableCell>1,000</TableCell>
                     <TableCell className="text-primary font-bold">$250</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("YouTube Starter Boost", "$250")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Growth Pack</TableCell>
@@ -170,6 +245,16 @@ const MembersOnly = () => {
                     <TableCell>1,000</TableCell>
                     <TableCell>2,500</TableCell>
                     <TableCell className="text-primary font-bold">$500</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("YouTube Growth Pack", "$500")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Pro Pack</TableCell>
@@ -177,6 +262,16 @@ const MembersOnly = () => {
                     <TableCell>2,000</TableCell>
                     <TableCell>5,000</TableCell>
                     <TableCell className="text-primary font-bold">$900</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("YouTube Pro Pack", "$900")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Premium Pack</TableCell>
@@ -184,6 +279,16 @@ const MembersOnly = () => {
                     <TableCell>4,000</TableCell>
                     <TableCell>10,000</TableCell>
                     <TableCell className="text-primary font-bold">$1,500</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("YouTube Premium Pack", "$1,500")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -212,6 +317,7 @@ const MembersOnly = () => {
                     <TableHead>Package</TableHead>
                     <TableHead>Plays</TableHead>
                     <TableHead>Price</TableHead>
+                    <TableHead>Action</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -219,21 +325,61 @@ const MembersOnly = () => {
                     <TableCell className="font-medium">Starter</TableCell>
                     <TableCell>50,000</TableCell>
                     <TableCell className="text-primary font-bold">$250</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("SoundCloud Starter", "$250")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Boost</TableCell>
                     <TableCell>150,000</TableCell>
                     <TableCell className="text-primary font-bold">$500</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("SoundCloud Boost", "$500")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Premium</TableCell>
                     <TableCell>500,000</TableCell>
                     <TableCell className="text-primary font-bold">$1,500</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("SoundCloud Premium", "$1,500")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell className="font-medium">Viral (Best Offer)</TableCell>
                     <TableCell>1,000,000</TableCell>
                     <TableCell className="text-primary font-bold">$2,500</TableCell>
+                    <TableCell>
+                      <Button 
+                        size="sm" 
+                        className="glow-button"
+                        onClick={() => handlePurchase("SoundCloud Viral", "$2,500")}
+                      >
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Buy Now
+                      </Button>
+                    </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -275,7 +421,8 @@ const MembersOnly = () => {
                   <span>Dedicated rep & strategy support</span>
                 </div>
               </div>
-              <Button className="glow-button">
+              <Button className="glow-button" onClick={() => handlePurchase("Label Ready Pro Membership", "$2,500/year")}>
+                <ShoppingCart className="w-4 h-4 mr-2" />
                 Upgrade to Pro Member
               </Button>
             </CardContent>
@@ -283,167 +430,289 @@ const MembersOnly = () => {
         </div>
       </section>
 
-      {/* SoundCloud Charting */}
+      {/* Label Charting Services */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <TrendingUp className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl font-bold gradient-text">🔥 SoundCloud Charting 📈</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold gradient-text mb-4">Label Charting Services</h2>
+            <p className="text-xl text-muted-foreground">Premium charting solutions for industry professionals</p>
           </div>
-          
-          <Card className="music-card mb-8">
-            <CardContent className="p-0">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Chart Rank</TableHead>
-                    <TableHead>Price</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium">Top 40–50</TableCell>
-                    <TableCell className="text-primary font-bold">$10,000</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Top 20–30</TableCell>
-                    <TableCell className="text-primary font-bold">$15,000</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Top 20–10</TableCell>
-                    <TableCell className="text-primary font-bold">$20,000</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Top 10</TableCell>
-                    <TableCell className="text-primary font-bold">$30,000</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Top 5</TableCell>
-                    <TableCell className="text-primary font-bold">$35,000</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-          
-          <p className="text-muted-foreground">
-            <span className="text-primary">📤</span> Submit music for approval. Pricing includes strategy, promo, and volume needed to trigger chart algorithm.
-          </p>
-        </div>
-      </section>
 
-      {/* Apple Music + iTunes Charting */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <Music className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl font-bold gradient-text">🍏 Apple Music + iTunes Charting 📈</h2>
+          {/* SoundCloud Charting */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-8">
+              <TrendingUp className="w-8 h-8 text-primary" />
+              <h3 className="text-3xl font-bold gradient-text">🔥 SoundCloud Charting 📈</h3>
+            </div>
+            
+            <Card className="music-card mb-8">
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Chart Rank</TableHead>
+                      <TableHead>Price</TableHead>
+                      <TableHead>Action</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Top 40–50</TableCell>
+                      <TableCell className="text-primary font-bold">$10,000</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("SoundCloud Top 40-50")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Inquire
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Top 20–30</TableCell>
+                      <TableCell className="text-primary font-bold">$15,000</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("SoundCloud Top 20-30")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Inquire
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Top 20–10</TableCell>
+                      <TableCell className="text-primary font-bold">$20,000</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("SoundCloud Top 20-10")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Inquire
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Top 10</TableCell>
+                      <TableCell className="text-primary font-bold">$30,000</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("SoundCloud Top 10")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Inquire
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Top 5</TableCell>
+                      <TableCell className="text-primary font-bold">$35,000</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("SoundCloud Top 5")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Inquire
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+            
+            <p className="text-muted-foreground">
+              <span className="text-primary">📤</span> Submit music for approval. Pricing includes strategy, promo, and volume needed to trigger chart algorithm.
+            </p>
           </div>
-          
-          <p className="text-muted-foreground mb-6">(Pop & Hip-Hop Singles or Albums)</p>
-          
-          <Card className="music-card mb-8">
-            <CardContent className="p-0">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Chart Rank</TableHead>
-                    <TableHead>Quote</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium">Top 100 – Top 5</TableCell>
-                    <TableCell className="text-primary font-bold">Ask for quote</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Number 1 Single (Est.)</TableCell>
-                    <TableCell className="text-primary font-bold">$25–30K</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Number 1 Album (Est.)</TableCell>
-                    <TableCell className="text-primary font-bold">$100K</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-          
-          <p className="text-muted-foreground">
-            <span className="text-primary">⏱</span> Quotes in 24–48 hrs. Final price varies by genre, project length, and timing.
-          </p>
-        </div>
-      </section>
 
-      {/* Singles & Projects - Units */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <BarChart3 className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl font-bold gradient-text">💽 Singles & Projects – Units 🎶</h2>
+          {/* Apple Music + iTunes Charting */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-8">
+              <Music className="w-8 h-8 text-primary" />
+              <h3 className="text-3xl font-bold gradient-text">🍏 Apple Music + iTunes Charting 📈</h3>
+            </div>
+            
+            <p className="text-muted-foreground mb-6">(Pop & Hip-Hop Singles or Albums)</p>
+            
+            <Card className="music-card mb-8">
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Chart Rank</TableHead>
+                      <TableHead>Quote</TableHead>
+                      <TableHead>Action</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Top 100 – Top 5</TableCell>
+                      <TableCell className="text-primary font-bold">Ask for quote</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("Apple Music Top 100-5")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Get Quote
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Number 1 Single (Est.)</TableCell>
+                      <TableCell className="text-primary font-bold">$25–30K</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("Apple Music #1 Single")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Inquire
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Number 1 Album (Est.)</TableCell>
+                      <TableCell className="text-primary font-bold">$100K</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("Apple Music #1 Album")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Inquire
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+            
+            <p className="text-muted-foreground">
+              <span className="text-primary">⏱</span> Quotes in 24–48 hrs. Final price varies by genre, project length, and timing.
+            </p>
           </div>
-          
-          <Card className="music-card text-center">
-            <CardHeader>
-              <CardTitle className="text-2xl gradient-text">RIAA Gold Plaque – 500,000 Units</CardTitle>
-              <CardDescription className="text-lg">Units delivered through streams & downloads</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="text-4xl font-bold text-primary">$3.5M</div>
-              <div className="text-lg text-muted-foreground">Estimated cost to achieve</div>
-              <div className="space-y-3 text-left max-w-md mx-auto">
-                <div className="flex items-center gap-3">
-                  <Zap className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span>Inquiries must be serious only</span>
+
+          {/* Singles & Projects - Units */}
+          <div className="mb-16">
+            <div className="flex items-center justify-center gap-3 mb-8">
+              <BarChart3 className="w-8 h-8 text-primary" />
+              <h3 className="text-3xl font-bold gradient-text">💽 Singles & Projects – Units 🎶</h3>
+            </div>
+            
+            <Card className="music-card text-center">
+              <CardHeader>
+                <CardTitle className="text-2xl gradient-text">RIAA Gold Plaque – 500,000 Units</CardTitle>
+                <CardDescription className="text-lg">Units delivered through streams & downloads</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="text-4xl font-bold text-primary">$3.5M</div>
+                <div className="text-lg text-muted-foreground">Estimated cost to achieve</div>
+                <div className="space-y-3 text-left max-w-md mx-auto">
+                  <div className="flex items-center gap-3">
+                    <Zap className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span>Inquiries must be serious only</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Zap className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span>🎯 Can be structured across multiple campaigns or bundled with charting</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Zap className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span>🎯 Can be structured across multiple campaigns or bundled with charting</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Billboard Charting */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <BarChart3 className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl font-bold gradient-text">📊 Billboard Charting 📈</h2>
+                <Button 
+                  variant="outline" 
+                  onClick={() => handleInquiry("RIAA Gold Plaque Campaign")}
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  Submit Serious Inquiry
+                </Button>
+              </CardContent>
+            </Card>
           </div>
-          
-          <Card className="music-card mb-8">
-            <CardContent className="p-0">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Chart</TableHead>
-                    <TableHead>Starting Price</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium">Billboard Sales Chart</TableCell>
-                    <TableCell className="text-primary font-bold">$25,000+</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Billboard Hot 100 (Top 90–100)</TableCell>
-                    <TableCell className="text-primary font-bold">$55,000+</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">Top 50 Spot Available</TableCell>
-                    <TableCell className="text-primary font-bold">Custom Quote</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-          
-          <p className="text-muted-foreground">
-            <span className="text-primary">📈</span> Billboard placements require large-scale volume and conversion tracking. Only available to pre-qualified clients.
-          </p>
+
+          {/* Billboard Charting */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-8">
+              <BarChart3 className="w-8 h-8 text-primary" />
+              <h3 className="text-3xl font-bold gradient-text">📊 Billboard Charting 📈</h3>
+            </div>
+            
+            <Card className="music-card mb-8">
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Chart</TableHead>
+                      <TableHead>Starting Price</TableHead>
+                      <TableHead>Action</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Billboard Sales Chart</TableCell>
+                      <TableCell className="text-primary font-bold">$25,000+</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("Billboard Sales Chart")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Inquire
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Billboard Hot 100 (Top 90–100)</TableCell>
+                      <TableCell className="text-primary font-bold">$55,000+</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("Billboard Hot 100")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Inquire
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Top 50 Spot Available</TableCell>
+                      <TableCell className="text-primary font-bold">Custom Quote</TableCell>
+                      <TableCell>
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          onClick={() => handleInquiry("Billboard Top 50")}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          Get Quote
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
+            
+            <p className="text-muted-foreground">
+              <span className="text-primary">📈</span> Billboard placements require large-scale volume and conversion tracking. Only available to pre-qualified clients.
+            </p>
+          </div>
         </div>
       </section>
 
