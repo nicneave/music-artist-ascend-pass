@@ -452,88 +452,48 @@ const MembersOnly = () => {
                     <TableRow>
                       <TableHead>Chart Rank</TableHead>
                       <TableHead>Price</TableHead>
-                      <TableHead>Action</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     <TableRow>
                       <TableCell className="font-medium">Top 40–50</TableCell>
                       <TableCell className="text-primary font-bold">$10,000</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("SoundCloud Top 40-50")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Inquire
-                        </Button>
-                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Top 20–30</TableCell>
                       <TableCell className="text-primary font-bold">$15,000</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("SoundCloud Top 20-30")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Inquire
-                        </Button>
-                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Top 20–10</TableCell>
                       <TableCell className="text-primary font-bold">$20,000</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("SoundCloud Top 20-10")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Inquire
-                        </Button>
-                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Top 10</TableCell>
                       <TableCell className="text-primary font-bold">$30,000</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("SoundCloud Top 10")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Inquire
-                        </Button>
-                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Top 5</TableCell>
                       <TableCell className="text-primary font-bold">$35,000</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("SoundCloud Top 5")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Inquire
-                        </Button>
-                      </TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
               </CardContent>
             </Card>
             
-            <p className="text-muted-foreground">
-              <span className="text-primary">📤</span> Submit music for approval. Pricing includes strategy, promo, and volume needed to trigger chart algorithm.
-            </p>
+            <div className="space-y-4">
+              <p className="text-muted-foreground">
+                <span className="text-primary">📤</span> Submit music for approval. Pricing includes strategy, promo, and volume needed to trigger chart algorithm.
+              </p>
+              <div className="text-center">
+                <Button 
+                  variant="outline"
+                  onClick={() => handleInquiry("SoundCloud Charting")}
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email for Inquiry
+                </Button>
+              </div>
+            </div>
           </div>
 
           {/* Apple Music + iTunes Charting */}
@@ -552,60 +512,40 @@ const MembersOnly = () => {
                     <TableRow>
                       <TableHead>Chart Rank</TableHead>
                       <TableHead>Quote</TableHead>
-                      <TableHead>Action</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     <TableRow>
                       <TableCell className="font-medium">Top 100 – Top 5</TableCell>
                       <TableCell className="text-primary font-bold">Ask for quote</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("Apple Music Top 100-5")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Get Quote
-                        </Button>
-                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Number 1 Single (Est.)</TableCell>
                       <TableCell className="text-primary font-bold">$25–30K</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("Apple Music #1 Single")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Inquire
-                        </Button>
-                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Number 1 Album (Est.)</TableCell>
                       <TableCell className="text-primary font-bold">$100K</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("Apple Music #1 Album")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Inquire
-                        </Button>
-                      </TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
               </CardContent>
             </Card>
             
-            <p className="text-muted-foreground">
-              <span className="text-primary">⏱</span> Quotes in 24–48 hrs. Final price varies by genre, project length, and timing.
-            </p>
+            <div className="space-y-4">
+              <p className="text-muted-foreground">
+                <span className="text-primary">⏱</span> Quotes in 24–48 hrs. Final price varies by genre, project length, and timing.
+              </p>
+              <div className="text-center">
+                <Button 
+                  variant="outline"
+                  onClick={() => handleInquiry("Apple Music Charting")}
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email for Inquiry
+                </Button>
+              </div>
+            </div>
           </div>
 
           {/* Singles & Projects - Units */}
@@ -638,7 +578,7 @@ const MembersOnly = () => {
                   onClick={() => handleInquiry("RIAA Gold Plaque Campaign")}
                 >
                   <Mail className="w-4 h-4 mr-2" />
-                  Submit Serious Inquiry
+                  Email for Inquiry
                 </Button>
               </CardContent>
             </Card>
@@ -658,60 +598,40 @@ const MembersOnly = () => {
                     <TableRow>
                       <TableHead>Chart</TableHead>
                       <TableHead>Starting Price</TableHead>
-                      <TableHead>Action</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     <TableRow>
                       <TableCell className="font-medium">Billboard Sales Chart</TableCell>
                       <TableCell className="text-primary font-bold">$25,000+</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("Billboard Sales Chart")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Inquire
-                        </Button>
-                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Billboard Hot 100 (Top 90–100)</TableCell>
                       <TableCell className="text-primary font-bold">$55,000+</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("Billboard Hot 100")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Inquire
-                        </Button>
-                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Top 50 Spot Available</TableCell>
                       <TableCell className="text-primary font-bold">Custom Quote</TableCell>
-                      <TableCell>
-                        <Button 
-                          size="sm" 
-                          variant="outline"
-                          onClick={() => handleInquiry("Billboard Top 50")}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Get Quote
-                        </Button>
-                      </TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
               </CardContent>
             </Card>
             
-            <p className="text-muted-foreground">
-              <span className="text-primary">📈</span> Billboard placements require large-scale volume and conversion tracking. Only available to pre-qualified clients.
-            </p>
+            <div className="space-y-4">
+              <p className="text-muted-foreground">
+                <span className="text-primary">📈</span> Billboard placements require large-scale volume and conversion tracking. Only available to pre-qualified clients.
+              </p>
+              <div className="text-center">
+                <Button 
+                  variant="outline"
+                  onClick={() => handleInquiry("Billboard Charting")}
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email for Inquiry
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
