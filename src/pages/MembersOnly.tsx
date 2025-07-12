@@ -1,14 +1,17 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Lock, Shield, Star, Zap, Music, Instagram, Youtube, Cloud, TrendingUp, BarChart3, ShoppingCart, Mail, Crown, Gem, Award } from "lucide-react";
+import { Lock, Shield, Star, Zap, Music, Instagram, Youtube, Cloud, TrendingUp, BarChart3, ShoppingCart, Mail, Crown, Gem, Award, ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const MembersOnly = () => {
   const [password, setPassword] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     // Simple password check - in production, this should be more secure
@@ -75,6 +78,19 @@ const MembersOnly = () => {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
+      {/* Back to Home Button */}
+      <div className="fixed top-4 left-4 z-50">
+        <Button 
+          variant="outline" 
+          size="sm"
+          onClick={() => navigate('/')}
+          className="flex items-center gap-2 backdrop-blur-sm bg-background/80"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Home
+        </Button>
+      </div>
+
       {/* Floating Icons Background */}
       <div className="absolute inset-0 pointer-events-none">
         <Lock className="absolute top-32 right-20 w-8 h-8 text-primary/10 animate-float" style={{ animationDelay: '0s' }} />
