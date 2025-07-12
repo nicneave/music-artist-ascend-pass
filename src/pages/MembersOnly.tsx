@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Lock, Shield, Star, Zap, Music, Instagram, Youtube, Cloud, TrendingUp, BarChart3, ShoppingCart, Mail } from "lucide-react";
+import { Lock, Shield, Star, Zap, Music, Instagram, Youtube, Cloud, TrendingUp, BarChart3, ShoppingCart, Mail, Crown, Gem, Award } from "lucide-react";
 
 const MembersOnly = () => {
   const [password, setPassword] = useState("");
@@ -35,10 +34,20 @@ const MembersOnly = () => {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <Card className="w-full max-w-md music-card">
+      <div className="min-h-screen bg-background flex items-center justify-center relative overflow-hidden">
+        {/* Floating Icons Background */}
+        <div className="absolute inset-0 pointer-events-none">
+          <Lock className="absolute top-20 left-20 w-8 h-8 text-primary/20 animate-float" style={{ animationDelay: '0s' }} />
+          <Shield className="absolute top-40 right-32 w-12 h-12 text-primary/15 animate-float" style={{ animationDelay: '2s' }} />
+          <Crown className="absolute bottom-40 left-16 w-10 h-10 text-primary/25 animate-float" style={{ animationDelay: '1s' }} />
+          <Gem className="absolute top-60 left-1/3 w-6 h-6 text-primary/30 animate-float" style={{ animationDelay: '3s' }} />
+          <Award className="absolute bottom-20 right-20 w-8 h-8 text-primary/20 animate-float" style={{ animationDelay: '1.5s' }} />
+          <Star className="absolute top-32 right-1/4 w-6 h-6 text-primary/25 animate-float" style={{ animationDelay: '2.5s' }} />
+        </div>
+
+        <Card className="w-full max-w-md music-card relative z-10">
           <CardHeader className="text-center">
-            <div className="mx-auto mb-4 w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center">
+            <div className="mx-auto mb-4 w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center animate-pulse-glow">
               <Lock className="w-8 h-8 text-primary" />
             </div>
             <CardTitle className="gradient-text text-2xl">Members Only</CardTitle>
@@ -65,9 +74,22 @@ const MembersOnly = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      {/* Floating Icons Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Lock className="absolute top-32 right-20 w-8 h-8 text-primary/10 animate-float" style={{ animationDelay: '0s' }} />
+        <Shield className="absolute top-20 left-1/4 w-10 h-10 text-primary/15 animate-float" style={{ animationDelay: '2s' }} />
+        <Crown className="absolute bottom-60 right-1/3 w-12 h-12 text-primary/10 animate-float" style={{ animationDelay: '1s' }} />
+        <Gem className="absolute top-80 right-16 w-6 h-6 text-primary/20 animate-float" style={{ animationDelay: '3s' }} />
+        <Award className="absolute bottom-40 left-20 w-8 h-8 text-primary/15 animate-float" style={{ animationDelay: '1.5s' }} />
+        <Star className="absolute top-1/2 left-16 w-6 h-6 text-primary/20 animate-float" style={{ animationDelay: '2.5s' }} />
+        <Music className="absolute bottom-80 right-1/4 w-8 h-8 text-primary/10 animate-float" style={{ animationDelay: '0.5s' }} />
+        <Instagram className="absolute top-96 left-1/3 w-6 h-6 text-primary/15 animate-float" style={{ animationDelay: '3.5s' }} />
+        <Youtube className="absolute bottom-32 left-1/2 w-8 h-8 text-primary/10 animate-float" style={{ animationDelay: '4s' }} />
+      </div>
+
       {/* Header */}
-      <section className="py-20 px-4 text-center">
+      <section className="py-20 px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
             <Shield className="w-5 h-5 text-primary" />
@@ -83,7 +105,7 @@ const MembersOnly = () => {
       </section>
 
       {/* Instagram Growth Packages */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <Instagram className="w-8 h-8 text-primary" />
@@ -201,7 +223,7 @@ const MembersOnly = () => {
       </section>
 
       {/* YouTube Boost Packages */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <Youtube className="w-8 h-8 text-primary" />
@@ -302,7 +324,7 @@ const MembersOnly = () => {
       </section>
 
       {/* SoundCloud Boost Packages */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <Cloud className="w-8 h-8 text-primary" />
@@ -393,7 +415,7 @@ const MembersOnly = () => {
       </section>
 
       {/* Label Ready Pro Membership */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-8">
             <Star className="w-8 h-8 text-primary" />
@@ -431,7 +453,7 @@ const MembersOnly = () => {
       </section>
 
       {/* Label Charting Services */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold gradient-text mb-4">Label Charting Services</h2>
@@ -637,7 +659,7 @@ const MembersOnly = () => {
       </section>
 
       {/* Terms & Notes */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <Card className="music-card">
             <CardHeader>
